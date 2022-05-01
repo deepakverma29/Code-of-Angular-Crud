@@ -1,0 +1,116 @@
+
+<div class="container">
+  <form [formGroup]="userForm" (ngSubmit)="addUser()">
+    <div class="title">Reactive Form</div>
+    <div class="row">
+      <div class="col md-6">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          placeholder="Your name.."
+        />
+        <span class="error-block" *ngIf="name.touched && name.invalid">Please Enter Name</span>
+         </div>
+      <div class="col md-6">
+        <label for="email">Email Id</label>
+        <input
+          type="text"
+          id="email"
+          formControlName="email"
+          placeholder="Email"
+        />
+        <span class="error-block" *ngIf="email.touched && email.errors && email.errors['required']">Please Enter Email</span>
+        <span class="error-block" *ngIf="email.touched && email.errors && email.errors['email']">Please enter valid Email</span>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col md-6">
+        <label for="password">Password</label>
+        <input
+          type="text"
+          id="password"
+          formControlName="password"
+          placeholder="Password"
+        />
+        <span class="error-block" *ngIf="password.touched && password.invalid">Please Enter Password</span>
+
+         </div>
+      <div class="col md-6">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="text"
+          id="confirmPassword"
+          name="confirmPassword"
+          formControlName="confirmPassword"
+          placeholder="Confirm Password"
+        />
+        <span class="error-block" *ngIf="confirmPassword.touched && confirmPassword.errors && confirmPassword.errors['required']">Please Enter Confirm Password</span>
+        <span class="error-block" *ngIf="confirmPassword.touched && confirmPassword.errors && confirmPassword.errors['PasswordNotMatched']">Confirm Password does not matched</span>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col md-6">
+        <label for="mobile">Mobile</label>
+        <input
+          type="text"
+          id="mobile"
+          formControlName="mobile"
+          placeholder="Mobile"
+        />
+        <span class="error-block" *ngIf="mobile.touched && mobile.invalid">Please Enter Mobile</span>
+
+      </div>
+      <div class="col md-6">
+        <label for="department">Department</label>
+        <select id="department" formControlName="department">
+          <option value="0" selected >Select</option>
+          <option value="IT">IT</option>
+          <option value="HR">HR</option>
+          <option value="Account">Account</option>
+        </select>
+        <span class="error-block" *ngIf="department.value=='0' && department.touched">Please select department</span>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col md-6">
+        <label for="gender">Gender</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="1" formControlName="gender" id="gender">
+          <label class="form-check-label" for="gender">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="0" formControlName="gender" id="gender1" >
+          <label class="form-check-label" for="gender1">
+            Female
+          </label>
+        </div>
+      </div>
+      <div class="col md-6">
+        <label for="address">Address</label>
+        <textarea formControlName="address"
+          id="address"
+          placeholder="Address"
+          style="height: 100px"
+          required
+        ></textarea>
+        <span class="error-block" *ngIf="address.touched && address.invalid">Please Enter Address</span>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="submit" value="Submit" />
+        <input type="button" value="Back" />
+      </div>
+    </div>
+  </form>
+</div>
+

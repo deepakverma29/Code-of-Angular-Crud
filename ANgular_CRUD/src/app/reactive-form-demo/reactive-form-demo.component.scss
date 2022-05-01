@@ -1,0 +1,116 @@
+input[type=radio]{
+  border: 1px solid rgba(0, 0, 0, 0.25) !important;
+}
+
+form{
+  border:none !important;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 5px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #089cbe;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #089cbe;
+}
+
+input[type=button]:hover {
+  background-color: #e97508;
+}
+
+input[type=button] {
+  background-color: #ccc;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 1px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 70px;;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title{
+  background-color: rgb(8, 156, 190);
+  height: 38px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 7px;
+  margin-bottom: 10px;
+}
+
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
+.error-block{
+  color: red;
+}

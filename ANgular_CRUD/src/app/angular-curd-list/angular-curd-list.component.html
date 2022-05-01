@@ -1,0 +1,33 @@
+
+<button type="button" class="btnAdd" (click)="AddUser()">Add User</button>
+<table class="styleText styled-table">
+  <thead>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Mobile</th>
+    <th>Gender</th>
+    <th>Department</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userList">
+      <td>{{user.Name}}</td>
+      <td>{{user.Email}}</td>
+      <td>{{user.Address}}</td>
+      <td>{{user.Mobile}}</td>
+      <td>{{user.Gender==1?"Male":"Female"}}</td>
+      <td>{{user.DepartmentName}}</td>
+      <td>
+        <i class="fa fa-edit editStyle" routerLink="/edituser/{{user.Id}}"></i>
+        <i class="fa fa-times deleteStyle" (click)="delete(user.Id)"></i>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<app-delete-popup [message]="message" (afterDeleteEvent)="afterDelete($event)"></app-delete-popup>
+<app-show-success-message [isVisible]="isVisible" [Message]="messageErrorSuccess"></app-show-success-message>
+<app-show-error-message [isVisibleError]="isVisibleError" [Message]="messageErrorSuccess"></app-show-error-message>
+

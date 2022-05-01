@@ -1,0 +1,4 @@
+<div *ngIf="isVisibleError" class="alert alert-danger alert-dismissible widthDivMessage" data-auto-dismiss role="alert">
+  <strong>Error!</strong> <span> {{Message}} </span>
+  <i class="fa fa-times ml10" (click)="closeMessage()" aria-hidden="true"></i>
+</div>

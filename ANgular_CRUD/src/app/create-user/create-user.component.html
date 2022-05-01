@@ -1,0 +1,101 @@
+<div class="container">
+  <form (ngSubmit)="submit(userForm)" #userForm="ngForm">
+    <div class="title">Create User ({{userId}})</div>
+    <div class="row">
+      <div class="col md-6">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="user.Name"
+          name="name"
+          #tempName="ngModel"
+          required
+          placeholder="Your name.."
+        />
+        <span class="error-block" *ngIf="tempName.touched && tempName.invalid">Please enter name</span>
+         </div>
+      <div class="col md-6">
+        <label for="email">Email Id</label>
+        <input
+          type="text"
+          id="email"
+          [(ngModel)]="user.Email"
+          name="email"
+          placeholder="Email"
+          #tempEmail="ngModel"
+          required
+        />
+        <span class="error-block" *ngIf="tempEmail.touched && tempEmail.invalid">Please enter email</span>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col md-6">
+        <label for="mobile">Mobile</label>
+        <input
+          type="text"
+          id="mobile"
+          name="mobile"
+          [(ngModel)]="user.Mobile"
+          placeholder="Mobile"
+          #tempMobile="ngModel"
+          required        />
+        <span class="error-block" *ngIf="tempMobile.touched && tempMobile.invalid">Please enter mobile</span>
+
+      </div>
+      <div class="col md-6">
+        <label for="department">Department</label>
+        <select id="department" name="department" required [(ngModel)]="user.DepartmentId" #tempDepartment="ngModel">
+          <option value="0" selected >Select</option>
+          <option value="{{depart.Id}}"  *ngFor="let depart of departments">{{depart.DepartmentName}}</option>
+
+        </select>
+        <span class="error-block" *ngIf="(tempDepartment.value=='0' && tempDepartment.touched)|| (tempDepartment.touched && tempDepartment.invalid)">Please select department</span>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col md-6">
+        <label for="gender">Gender</label>
+        <div class="form-check">
+          <input class="form-check-input" [(ngModel)]="user.Gender" type="radio" value="1" name="gender" id="gender">
+          <label class="form-check-label" for="gender">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" [(ngModel)]="user.Gender" type="radio" value="0" name="gender" id="gender1" >
+          <label class="form-check-label" for="gender1">
+            Female
+          </label>
+        </div>
+      </div>
+      <div class="col md-6">
+        <label for="address">Address</label>
+        <textarea
+          id="address"
+          name="address"
+          [(ngModel)]="user.Address"
+          placeholder="Address"
+          style="height: 100px"
+          #tempAddress="ngModel"
+          required
+        ></textarea>
+        <span class="error-block" *ngIf="tempAddress.touched && tempAddress.invalid">Please enter Address</span>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <input [disabled]="userForm.invalid" type="submit" value="Submit" />
+        <input type="button" value="Back" routerLink="/" />
+      </div>
+    </div>
+  </form>
+</div>
+
+{{user | json}}
+<app-show-success-message [Message]="message" [isVisible]="isVisible"></app-show-success-message>
+<app-show-error-message [Message]="message" [isVisibleError]="isVisibleError"></app-show-error-message>

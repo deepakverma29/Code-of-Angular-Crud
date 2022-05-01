@@ -1,0 +1,37 @@
+[{
+  "Id":1,
+  "Name":"Deepak Verma",
+  "Email":"se.deepak29@gmail.com",
+  "Mobile":9927198675,
+  "Address":"India",
+  "Gender":"Male",
+  "DepartmentName":"SE"
+},
+{
+  "Id":2,
+  "Name":"Rohit Sharma",
+  "Email":"rohit29@gmail.com",
+  "Mobile":78544221212,
+  "Address":"India",
+  "Gender":"Male",
+  "DepartmentName":"CA"
+},
+{
+  "Id":3,
+  "Name":"Gaurav Verma",
+  "Email":"gaurav25@gmail.com",
+  "Mobile":78544221892,
+  "Address":"India",
+  "Gender":"Female",
+  "DepartmentName":"DBA"
+},
+{
+  "Id":4,
+  "Name":"Taniya Sharma",
+  "Email":"taniya21@gmail.com",
+  "Mobile":78544245442,
+  "Address":"India",
+  "Gender":"Female",
+  "DepartmentName":"HR"
+}
+]

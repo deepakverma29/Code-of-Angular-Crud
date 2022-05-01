@@ -1,0 +1,62 @@
+.styleText{
+  // margin-top: 100px !important;
+  margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+table{text-align: left;
+  border: 1px outset;}
+thead {
+  background-color:rgb(8, 156, 190);
+  color: white;
+}
+  .styled-table thead tr {
+    background-color:  rgb(8, 156, 190);;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid  rgb(8, 156, 190);;
+}
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color:  rgb(8, 156, 190);;
+}
+.btnAdd{
+  margin-top: 70px;
+  margin-left: 94px;
+  background-color: #089cbe;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.editStyle{
+  color:blue;
+  margin-right: 10px;
+}
+.deleteStyle{
+  color: red;
+}
